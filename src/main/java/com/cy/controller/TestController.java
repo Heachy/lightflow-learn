@@ -1,5 +1,7 @@
 package com.cy.controller;
 
+import com.cy.component.MyContext;
+import com.cy.dto.TestDTO;
 import com.yomahub.liteflow.core.FlowExecutor;
 import com.yomahub.liteflow.flow.LiteflowResponse;
 import javax.annotation.Resource;
@@ -18,6 +20,9 @@ public class TestController {
     @Resource
     private FlowExecutor flowExecutor;
 
+    @Resource
+    private MyContext myContext;
+
     @GetMapping("/hello")
     public String hello() {
 
@@ -29,9 +34,10 @@ public class TestController {
     }
 
 
-    @GetMapping("/xxx")
+    @GetMapping("/check")
     public String hello2() {
 
-        return "hello2";
+        LiteflowResponse response = flowExecutor.execute2Resp( "parityCheck", new TestDTO("parityCheck",4), myContext);
+        return "happy";
     }
 }

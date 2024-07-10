@@ -3,4 +3,8 @@
     <chain name="chain1">
         THEN(a, b, c);
     </chain>
+
+    <chain name="parityCheck">
+        SWITCH(d).to(e, f);
+    </chain>
 </flow>
