@@ -1,0 +1,4 @@
+server:
+    port: 9731
+liteflow:
+    rule-source: config/flow.el.xml
