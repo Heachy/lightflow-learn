@@ -20,7 +20,7 @@ public class DCmp extends NodeSwitchComponent {
 
         if (testDTO.getCount() % 2 != 0) {
 
-            myContext.setNumber( 1021 );
+            myContext.setNumber( 10211 );
 
             return "e";
         } else {
