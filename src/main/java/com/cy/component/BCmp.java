@@ -13,7 +13,7 @@ public class BCmp extends NodeComponent {
     @Override
     public void process() {
         //do your business
-        System.out.println("BCmp executed!");
+        System.out.println("BCmp  21 executed!");
     }
 }
 
