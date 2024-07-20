@@ -12,7 +12,7 @@ public class ECmp extends NodeComponent {
 
     @Override
     public void process() throws Exception {
-        System.out.println("ECmp executed!");
+        System.out.println("ECmp 666 executed!");
 
         MyContext myContext = this.getContextBean( "myContext" );
 
