@@ -4,6 +4,8 @@ import com.cy.component.MyContext;
 import com.cy.dto.TestDTO;
 import com.yomahub.liteflow.core.FlowExecutor;
 import com.yomahub.liteflow.flow.LiteflowResponse;
+import java.util.ArrayList;
+import java.util.List;
 import javax.annotation.Resource;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -40,6 +42,23 @@ public class TestController {
     public String hello2() {
 
         LiteflowResponse response = flowExecutor.execute2Resp( "parityCheck", new TestDTO("parityCheck",4), myContext);
+        return "hap123py";
+    }
+
+    @GetMapping("/for")
+    public String forHello() {
+
+        List<TestDTO> list = new ArrayList<>();
+
+        list.add( new TestDTO("hahaha",6) );
+        list.add( new TestDTO("yayaya",7) );
+        list.add( new TestDTO("zazaza",8) );
+
+        myContext.setTestDTO( new TestDTO("aaaaaa",89) );
+
+
+
+        LiteflowResponse response = flowExecutor.execute2Resp( "forTest", list, myContext);
         return "hap123py";
     }
 }

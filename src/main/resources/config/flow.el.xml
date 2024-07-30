@@ -7,4 +7,11 @@
     <chain name="parityCheck">
         SWITCH(d).to(e, f);
     </chain>
+
+    <chain name="forTest">
+        THEN(
+            ITERATOR(IteratorTest).DO(THEN(e,f)),
+            e
+        );
+    </chain>
 </flow>
